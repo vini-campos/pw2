@@ -207,9 +207,29 @@
 
     <h2>Global e $_SERVER</h2>
     <a href="dados.php?var1=agnaldo&var2=2213">Exemplo requisição GET</a>
-    
-    <script src="js/bootstrap.bundle.min.js">
 
+    <h2>Global POST</h2>
+    <form action="dados.php?var=exemplo123" Method="post" enctype="multipart/form-data">
+        <label for="nom">Nome: </label>
+        <input type="text" name="nome" id="nom" maxlength="50"
+         value="" placeholder="Seu nome"><br>
+        
+        <label for="end">Endereço: </label>
+        <input type="text" name="endereco" id="end" maxlength="50"
+         placeholder="Seu endereço"><br>
+
+        <label for="dtnasc">Data de nascimento: </label>
+        <input type="date" name="datanasc" id="dtnasc"
+         min="2012-01-01" max="2020-12-31"><br>
+
+        <label for="aquivo">Foto: </label>
+        <input type="file" accept="image/*" name="arq" id="arquivo"><br>
+
+        <input type="submit" value="Gravar"><br>
+        <button type="submit">Mandar</button>
+    </form>
+
+    <script src="js/bootstrap.bundle.min.js">
     </script>
 </body>
 
